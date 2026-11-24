@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "opencode-zen",
+  "name": "OpenCode Zen",
+  "category": "official-api",
+  "packageType": "official-json",
+  "verified": true,
+  "publishedAt": "2026-11-17",
+  "baseUrl": "https://opencode.ai/zen/v1",
+  "auth": {
+    "type": "bearer",
+    "header": "Authorization",
+    "prefix": "Bearer ",
+    "extraHeaders": {
+      "User-Agent": "opencode/latest/2.0.28/cli",
+      "x-opencode-client": "cli",
+      "x-opencode-session": "local-router",
+      "x-session-id": "local-router"
+    }
+  },
+  "modelsSource": "api",
+  "modelsEndpoint": "/models",
+  "freeRule": {
+    "priceZeroPaths": ["cost.text.input.price", "cost.text.output.price"]
+  },
+  "privacy": {
+    "retention": "variable",
+    "training": "unknown",
+    "policyUrl": "https://opencode.ai/docs/zen",
+    "note": "Gateway multi-modelo: la retención depende del proveedor subyacente de cada modelo gratuito."
+  },
+  "rateLimitKind": "requests",
+  "rateLimitWindows": ["day"]
+}

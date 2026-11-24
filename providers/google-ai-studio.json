@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "id": "google-ai-studio",
+  "name": "Google AI Studio (Gemini OpenAI API)",
+  "category": "official-api",
+  "packageType": "official-json",
+  "verified": true,
+  "publishedAt": "2026-11-17",
+  "baseUrl": "https://generativelanguage.googleapis.com/v1beta/openai",
+  "auth": {
+    "type": "bearer",
+    "header": "Authorization",
+    "prefix": "Bearer "
+  },
+  "modelsSource": "api",
+  "modelsEndpoint": "/models",
+  "privacy": {
+    "retention": "retained",
+    "training": "allowed",
+    "policyUrl": "https://ai.google.dev/gemini-api/terms",
+    "note": "En capa gratuita de Google AI Studio los prompts y respuestas pueden ser revisados y utilizados para mejorar productos."
+  },
+  "rateLimitKind": "requests",
+  "rateLimitWindows": ["day"]
+}
