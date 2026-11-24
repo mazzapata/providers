@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "openrouter",
+  "name": "OpenRouter",
+  "category": "aggregator",
+  "packageType": "official-json",
+  "verified": true,
+  "publishedAt": "2026-11-17",
+  "baseUrl": "https://openrouter.ai/api/v1",
+  "auth": {
+    "type": "bearer",
+    "header": "Authorization",
+    "prefix": "Bearer ",
+    "extraHeaders": {
+      "HTTP-Referer": "https://github.com/mazzapata/providers",
+      "X-Title": "LLM Router"
+    }
+  },
+  "modelsSource": "api",
+  "modelsEndpoint": "/models",
+  "freeRule": {
+    "priceZeroPaths": ["pricing.prompt", "pricing.completion"],
+    "idSuffix": ":free"
+  },
+  "privacy": {
+    "retention": "variable",
+    "training": "unknown",
+    "policyUrl": "https://openrouter.ai/privacy",
+    "note": "Enrutador multiproveedor: la retención y ZDR dependen del proveedor upstream seleccionado para cada modelo."
+  },
+  "rateLimitKind": "requests",
+  "rateLimitWindows": ["day"]
+}
